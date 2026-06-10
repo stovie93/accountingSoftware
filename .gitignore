@@ -1,0 +1,36 @@
+# ---------- .NET ----------
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+.vs/
+project.lock.json
+artifacts/
+
+# ---------- Node / Vite frontend ----------
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+
+# ---------- Environment / secrets ----------
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+
+# ---------- Editor / OS ----------
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---------- Claude Code local settings ----------
+.claude/settings.local.json
+
+# ---------- Logs ----------
+*.log
+npm-debug.log*
