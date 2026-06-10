@@ -805,7 +805,7 @@ export interface ResidentImportError {
   message: string;
 }
 
-// Push to Conservice Types
+// Push to PropertyViewer Types
 export interface ResidentPushRequest {
   propertyId: string;
   residentIds?: string[];

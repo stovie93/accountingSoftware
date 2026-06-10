@@ -1,9 +1,9 @@
 :root {
-  /* Conservice Brand Colors */
+  /* PropertyViewer Brand Colors */
   --primary-color: #003366;       /* Dark navy blue */
   --primary-hover: #002244;       /* Darker navy */
   --primary-light: #004488;       /* Lighter navy for hover states */
-  --accent-color: #00a651;        /* Conservice green */
+  --accent-color: #00a651;        /* PropertyViewer green */
   --accent-hover: #008c44;        /* Darker green */
   --accent-light: #00c45a;        /* Brighter green */
 

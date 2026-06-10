@@ -47,7 +47,7 @@ export default function Layout() {
     <div className="app-layout">
       <nav className="sidebar">
         <div className="sidebar-header">
-          <h2>Conservice</h2>
+          <h2>PropertyViewer</h2>
           <span>Accounting</span>
         </div>
         <div className="nav-menu">

@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h1>Conservice Accounting</h1>
+        <h1>PropertyViewer Accounting</h1>
         <form onSubmit={handleSubmit}>
           {error && <div className="error-message">{error}</div>}
           <div className="form-group">

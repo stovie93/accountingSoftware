@@ -1,4 +1,4 @@
-# Conservice Accounting Software
+# PropertyViewer Accounting Software
 
 A multi-tenant accounting application for managing properties, bills, providers, utilities, and financial items.
 
@@ -34,10 +34,10 @@ A multi-tenant accounting application for managing properties, bills, providers,
 accountingSoftware/
 ├── docker-compose.yml          # PostgreSQL database container
 ├── src/
-│   ├── ConserviceAccounting.sln
-│   ├── ConserviceAccounting.Api/        # Web API project
-│   ├── ConserviceAccounting.Core/       # Domain models and interfaces
-│   ├── ConserviceAccounting.Infrastructure/  # Data access and EF Core
+│   ├── PropertyViewerAccounting.sln
+│   ├── PropertyViewerAccounting.Api/        # Web API project
+│   ├── PropertyViewerAccounting.Core/       # Domain models and interfaces
+│   ├── PropertyViewerAccounting.Infrastructure/  # Data access and EF Core
 │   └── web/                             # React frontend
 └── tests/                               # Test projects
 ```
@@ -63,14 +63,14 @@ docker-compose up -d
 This will start PostgreSQL on port 5432 with:
 - Username: `postgres`
 - Password: `postgres`
-- Database: `conservice_accounting`
+- Database: `propertyviewer_accounting`
 
 ### Step 2: Run the Backend API
 
 Navigate to the API project and run:
 
 ```bash
-cd src/ConserviceAccounting.Api
+cd src/PropertyViewerAccounting.Api
 dotnet run
 ```
 
@@ -106,7 +106,7 @@ Open your browser to `http://localhost:5173` and login with:
 
 ```bash
 # Run the API
-cd src/ConserviceAccounting.Api
+cd src/PropertyViewerAccounting.Api
 dotnet run
 
 # Run in watch mode (auto-restart on changes)
@@ -114,7 +114,7 @@ dotnet watch run
 
 # Build the solution
 cd src
-dotnet build ConserviceAccounting.sln
+dotnet build PropertyViewerAccounting.sln
 ```
 
 ### Frontend
@@ -155,17 +155,17 @@ docker-compose logs -f postgres
 
 ### API Configuration
 
-The API configuration is in `src/ConserviceAccounting.Api/appsettings.json`:
+The API configuration is in `src/PropertyViewerAccounting.Api/appsettings.json`:
 
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Port=5432;Database=conservice_accounting;Username=postgres;Password=postgres"
+    "DefaultConnection": "Host=localhost;Port=5432;Database=propertyviewer_accounting;Username=postgres;Password=postgres"
   },
   "Jwt": {
     "Secret": "YourSuperSecretKeyThatIsAtLeast32CharactersLong!",
-    "Issuer": "ConserviceAccounting",
-    "Audience": "ConserviceAccountingClients",
+    "Issuer": "PropertyViewerAccounting",
+    "Audience": "PropertyViewerAccountingClients",
     "ExpirationMinutes": 60
   },
   "Cors": {
@@ -228,6 +228,6 @@ The seeder runs on every API startup and ensures the admin user exists with the 
 ```bash
 docker-compose down -v
 docker-compose up -d
-cd src/ConserviceAccounting.Api
+cd src/PropertyViewerAccounting.Api
 dotnet run
 ```

@@ -3,11 +3,11 @@ version: '3.8'
 services:
   postgres:
     image: postgres:16
-    container_name: conservice-accounting-db
+    container_name: propertyviewer-accounting-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: conservice_accounting
+      POSTGRES_DB: propertyviewer_accounting
     ports:
       - "5432:5432"
     volumes:

@@ -870,7 +870,7 @@ function ResidentImportTab() {
     });
   };
 
-  const handlePushToConservice = () => {
+  const handlePushToPropertyViewer = () => {
     if (!selectedProperty || !importResult) return;
     pushMutation.mutate({ propertyId: selectedProperty.propertyId });
   };
@@ -1146,16 +1146,16 @@ function ResidentImportTab() {
               </button>
               <button
                 className="btn-primary"
-                onClick={handlePushToConservice}
+                onClick={handlePushToPropertyViewer}
                 disabled={pushMutation.isPending}
               >
-                {pushMutation.isPending ? 'Pushing...' : 'Push to Conservice'}
+                {pushMutation.isPending ? 'Pushing...' : 'Push to PropertyViewer'}
               </button>
             </div>
 
             {pushMutation.isSuccess && (
               <div className="success-message">
-                Successfully pushed {pushMutation.data?.residentCount} residents to Conservice
+                Successfully pushed {pushMutation.data?.residentCount} residents to PropertyViewer
               </div>
             )}
           </div>
