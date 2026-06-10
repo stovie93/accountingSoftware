@@ -13,6 +13,7 @@ A multi-tenant accounting application for managing properties, bills, providers,
 - **JWT Bearer Authentication** - Token-based authentication
 - **BCrypt.Net** - Password hashing
 - **Swashbuckle** - Swagger/OpenAPI documentation
+- **ClosedXML** - Excel (.xlsx) report export
 
 ### Frontend
 - **React 19** - UI library
@@ -76,9 +77,9 @@ dotnet run
 The API will:
 - Apply database migrations automatically
 - Seed demo data (including demo tenant and admin user)
-- Start on `https://localhost:5001` (or `http://localhost:5000`)
+- Start on `http://localhost:5141` (HTTPS profile: `https://localhost:7013`)
 
-Swagger documentation is available at: `https://localhost:5001/swagger`
+Swagger documentation is available at: `http://localhost:5141/swagger`
 
 ### Step 3: Run the Frontend
 
@@ -175,7 +176,13 @@ The API configuration is in `src/ConserviceAccounting.Api/appsettings.json`:
 
 ### Frontend Configuration
 
-The frontend API URL is configured in `src/web/src/services/api.ts`. By default, it connects to `http://localhost:5000`.
+The frontend talks to the API at the URL in the `VITE_API_URL` environment variable, falling back to `http://localhost:5141/api` (see `src/web/src/services/api.ts`).
+
+To override it, create a `src/web/.env` file (this file is git-ignored):
+
+```bash
+VITE_API_URL=http://localhost:5141/api
+```
 
 ## Features
 
